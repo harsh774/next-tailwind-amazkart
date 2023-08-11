@@ -10,6 +10,9 @@ import { Store } from '../utils/Store';
 import DropdownLink from './DropdownLink';
 import { useRouter } from 'next/router';
 import SearchIcon from '@heroicons/react/24/outline/MagnifyingGlassIcon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 export default function Layout({ title, children }) {
   const { status, data: session } = useSession();
@@ -71,12 +74,16 @@ export default function Layout({ title, children }) {
             </form>
             <div className="flex items-center z-10">
               <Link href="/cart" className="p-2">
-                Cart
-                {cartItemsCount > 0 && (
-                  <span className="ml-1 rounded-full bg-red-600 px-2 py-1 text-xs font-bold text-white">
+                {cartItemsCount >= 0 && (
+                  <span className="ml-3 rounded-full bg-yellow-300 px-2 py-1 text-xs font-bold text-white">
                     {cartItemsCount}
                   </span>
                 )}
+
+                <FontAwesomeIcon
+                  icon={faCartShopping}
+                  className="text-blue text-s"
+                />
               </Link>
 
               {status === 'loading' ? (
@@ -131,7 +138,9 @@ export default function Layout({ title, children }) {
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
-          <p>Copyright © 2023 AmazeKart</p>
+          <p>Copyright © 2023 AmazeKart </p>
+
+          <p>Made with 💛 by Harsh</p>
         </footer>
       </div>
     </>

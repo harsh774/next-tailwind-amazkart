@@ -30,6 +30,23 @@ export default function ProductScreen(props) {
     router.push('/cart');
   };
 
+  const generateStars = (rating) => {
+    const fullStars = Math.floor(rating);
+    const emptyStars = 5 - fullStars;
+
+    const stars = [];
+
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<span key={`full-star-${i}`}>&#9733;</span>);
+    }
+
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(<span key={`empty-star-${i}`}>&#9734;</span>);
+    }
+
+    return stars;
+  };
+
   return (
     <Layout title={product.name}>
       <div className="py-2">
@@ -57,7 +74,12 @@ export default function ProductScreen(props) {
             <li>Category: {product.category}</li>
             <li>Brand: {product.brand}</li>
             <li>
-              {product.rating} of {product.numReviews} reviews
+              <div className="mb-2">
+                <span className="text-yellow-500">
+                  {generateStars(product.rating)}
+                </span>{' '}
+                &nbsp;({product.numReviews} reviews)
+              </div>
             </li>
             <li>Description: {product.description}</li>
           </ul>
@@ -66,7 +88,7 @@ export default function ProductScreen(props) {
           <div className="card p-5">
             <div className="mb-2 flex justify-between">
               <div>Price</div>
-              <div>${product.price}</div>
+              <div>₹{product.price}</div>
             </div>
             <div className="mb-2 flex justify-between">
               <div>Status</div>

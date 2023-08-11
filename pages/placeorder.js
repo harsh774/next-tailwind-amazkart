@@ -1,5 +1,5 @@
 import axios from 'axios';
-import Image from "next/image";
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
@@ -106,25 +106,27 @@ export default function PlaceOrderScreen() {
                   {cartItems.map((item) => (
                     <tr key={item._id} className="border-b">
                       <td>
-                        <Link href={`/product/${item.slug}`} className="flex items-center">
-
+                        <Link
+                          href={`/product/${item.slug}`}
+                          className="flex items-center"
+                        >
                           <Image
                             src={item.image}
                             alt={item.name}
                             width={50}
                             height={50}
                             style={{
-                              maxWidth: "100%",
-                              height: "auto"
-                            }}></Image>
+                              maxWidth: '100%',
+                              height: 'auto',
+                            }}
+                          ></Image>
                           {item.name}
-
                         </Link>
                       </td>
                       <td className=" p-5 text-right">{item.quantity}</td>
                       <td className="p-5 text-right">${item.price}</td>
                       <td className="p-5 text-right">
-                        ${item.quantity * item.price}
+                        ₹{item.quantity * item.price}
                       </td>
                     </tr>
                   ))}
@@ -142,25 +144,25 @@ export default function PlaceOrderScreen() {
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Items</div>
-                    <div>${itemsPrice}</div>
+                    <div>₹{itemsPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Tax</div>
-                    <div>${taxPrice}</div>
+                    <div>₹{taxPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Shipping</div>
-                    <div>${shippingPrice}</div>
+                    <div>₹{shippingPrice}</div>
                   </div>
                 </li>
                 <li>
                   <div className="mb-2 flex justify-between">
                     <div>Total</div>
-                    <div>${totalPrice}</div>
+                    <div>₹{totalPrice}</div>
                   </div>
                 </li>
                 <li>

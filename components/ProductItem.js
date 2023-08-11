@@ -17,7 +17,16 @@ export default function ProductItem({ product, addToCartHandler }) {
           <h2 className="text-lg">{product.name}</h2>
         </Link>
         <p className="mb-2">{product.brand}</p>
-        <p>${product.price}</p>
+        <p>₹{product.price}</p>
+        {product.countInStock > 0 ? (
+          <p className="text-green-600">
+            {product.countInStock <= 20
+              ? `Only ${product.countInStock} left`
+              : 'In Stock'}
+          </p>
+        ) : (
+          <p className="text-red-600">Out of Stock</p>
+        )}
         <button
           className="primary-button"
           type="button"
