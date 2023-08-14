@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useContext } from 'react';
@@ -8,6 +9,7 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+// import { emptyCart } from '../public/images/empty.jpg';
 
 function CartScreen() {
   const router = useRouter();
@@ -33,6 +35,13 @@ function CartScreen() {
       {cartItems.length === 0 ? (
         <div>
           Cart is empty. <Link href="/">Go shopping</Link>
+          <Image
+            src="/../public/images/empty.jpg"
+            width={600}
+            height={800}
+            // style={{ paddingLeft: 300 }}
+            alt=""
+          />
         </div>
       ) : (
         <div className="grid md:grid-cols-4 md:gap-5">
@@ -110,6 +119,12 @@ function CartScreen() {
               </li>
             </ul>
           </div>
+          <frame />
+          <Image
+            src="/../public/images/shopmore3.png"
+            width={1000}
+            height={1000}
+          ></Image>
         </div>
       )}
     </Layout>

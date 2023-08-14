@@ -11,7 +11,6 @@ import DropdownLink from './DropdownLink';
 import { useRouter } from 'next/router';
 import SearchIcon from '@heroicons/react/24/outline/MagnifyingGlassIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 export default function Layout({ title, children }) {
@@ -138,9 +137,8 @@ export default function Layout({ title, children }) {
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
-          <p>Copyright © 2023 AmazeKart </p>
-
-          <p>Made with 💛 by Harsh</p>
+          <p>Copyright © 2023 AmazeKart</p>
+          <p>~Made with 💛 by Harsh</p>
         </footer>
       </div>
     </>
