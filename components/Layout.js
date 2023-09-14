@@ -50,8 +50,8 @@ export default function Layout({ title, children }) {
       <div className="flex min-h-screen flex-col justify-between ">
         <header>
           <nav className="flex h-12 items-center px-4 justify-between shadow-md">
-            <Link href="/" className="text-lg font-bold">
-              amazekart
+            <Link href="/" className="text-lg font-bold" >
+              AMAZEKART
             </Link>
             <form
               onSubmit={submitHandler}
@@ -73,16 +73,18 @@ export default function Layout({ title, children }) {
             </form>
             <div className="flex items-center z-10">
               <Link href="/cart" className="p-2">
+              
                 {cartItemsCount >= 0 && (
                   <span className="ml-3 rounded-full bg-yellow-300 px-2 py-1 text-xs font-bold text-white">
                     {cartItemsCount}
                   </span>
                 )}
-
                 <FontAwesomeIcon
                   icon={faCartShopping}
-                  className="text-blue text-s"
+                  className="text-blue-500 text-s"
                 />
+
+                
               </Link>
 
               {status === 'loading' ? (
