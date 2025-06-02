@@ -1,7 +1,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat) [![Active](http://img.shields.io/badge/Status-Active-green.svg)](https://tterb.github.io) [![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)]() [![NPM License](https://img.shields.io/npm/l/all-contributors.svg?style=flat)](https://github.com/tterb/hyde/blob/master/LICENSE)
 # Next.JS-Tailwind-AmazeKart <a href='https://e-com-amazekart-harsh.vercel.app/' target="_blank"><img alt='react' src='https://img.shields.io/badge/Live-100000?style=social&logo=vercel&logoColor=03A6F7&labelColor=000000&color=020202'/></a>
 
-Next.JS-Tailwind-AmazeKart is a feature-rich e-commerce web application built using Next.js and Tailwind CSS. It allows users to browse, search, and purchase various products online. The project is deployed on ![Vercel](https://img.shields.io/badge/Vercel-Black?style=plastic&logo=Vercel&logoColor=White) and includes the following key features:
+Next.JS-Tailwind-AmazeKart is a feature-rich e-commerce web application built using Next.js and Tailwind CSS. It allows users to browse, search, and purchase various products online. The project is deployed on ![Vercel](https://img.shields.io/badge/Vercel-Black?style=plastic&logo=Vercel&logoColor=White) and includes the following key features.:
  <br/>
 
 ***Home Page***
