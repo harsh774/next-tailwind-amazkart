@@ -73,7 +73,7 @@ export default function Layout({ title, children }) {
             </form>
             <div className="flex items-center z-10">
               <Link href="/cart" className="p-2">
-              
+
                 {cartItemsCount >= 0 && (
                   <span className="ml-3 rounded-full bg-yellow-300 px-2 py-1 text-xs font-bold text-white">
                     {cartItemsCount}
@@ -84,7 +84,7 @@ export default function Layout({ title, children }) {
                   className="text-blue-500 text-s"
                 />
 
-                
+
               </Link>
 
               {status === 'loading' ? (
@@ -139,8 +139,8 @@ export default function Layout({ title, children }) {
         </header>
         <main className="container m-auto mt-4 px-4">{children}</main>
         <footer className="flex h-10 justify-center items-center shadow-inner">
-          <p>Copyright © 2023 AmazeKart</p>
-          <p>~Made with 💛 by Harsh</p>
+          <p>© {new Date().getFullYear()} AmazeKart</p>
+          <p>~ Made with 💛 by Harsh</p>
         </footer>
       </div>
     </>

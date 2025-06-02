@@ -9,6 +9,7 @@ import { Store } from '../utils/Store';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home({ products, featuredProducts }) {
   const { state, dispatch } = useContext(Store);
@@ -33,7 +34,11 @@ export default function Home({ products, featuredProducts }) {
         {featuredProducts.map((product) => (
           <div key={product._id}>
             <Link href={`/product/${product.slug}`} passHref className="flex">
-              <img src={product.banner} alt={product.name} />
+              <Image src={product.banner} alt={product.name}
+                width={100}
+                height={100}
+
+              />
             </Link>
           </div>
         ))}
