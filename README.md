@@ -44,11 +44,11 @@ The project is deployed on ![Vercel](https://img.shields.io/badge/Vercel-Black?s
 
 ## Getting Started
 
-To explore and run the project locally, follow these steps:
+To explore and run the project locally, follow these steps-:
 
 ### Prerequisites
 
-Make sure you have the following software installed on your system:
+Make sure you have the following software installed on your system-:
 
 - Node.js (at least version 12)
 - npm (Node Package Manager) or yarn
